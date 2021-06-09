@@ -23,7 +23,7 @@ class TestRepo111ApplicationTests {
         this.mockMvc.perform(get("/"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().string("Hello from get method!"));
+                .andExpect(content().string("hello Jenkins"));
     }
 
 }
