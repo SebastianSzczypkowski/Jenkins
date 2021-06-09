@@ -30,10 +30,20 @@
     </dependencies>
 
     <build>
+
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>3.0.2</version>
+                <configuration><appName>test-repo1111</appName>
+                <processTypes>
+                    <web>java - jar -Dserver.port=$PORT target/${project.build.finalName}.jar</web>
+                </processTypes></configuration>
             </plugin>
         </plugins>
     </build>
