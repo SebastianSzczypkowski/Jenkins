@@ -18,12 +18,12 @@ class TestRepo111ApplicationTests {
     @Autowired
     private MockMvc mockMvc;
     @Test
-    void shouldReturnDefaulMessage() throws Exception {
+    void shouldReturnDefaultMessage() throws Exception
+    {
         this.mockMvc.perform(get("/"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().string("Hello Jenkins"));
-
+                .andExpect(content().string("Hello from get method!"));
     }
 
 }
